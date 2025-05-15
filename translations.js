@@ -2,7 +2,7 @@ const translations = {
     es: {
         title: "Guía de Git para Estudiantes - Trabajo Colaborativo",
         darkMode: "Modo Oscuro",
-        heroTitle: "Aprende a Trabajar en Equipo con Git",
+        heroTitle: "Git Commands",
         heroSubtitle: "Guía paso a paso para estudiantes que inician en el desarrollo web colaborativo",
         initialSetup: "📌 Configuración Inicial",
         createAccount: "1. Crear Cuenta en GitHub",
@@ -57,12 +57,21 @@ const translations = {
         vscode: "Visual Studio Code",
         vscodeInfo: "Editor de código con integración nativa de Git.",
         downloadVscode: "Descargar VSCode",
-        footer: "Desarrollado por <span class=\"heart\">soynixonlopez</span> con <i class=\"fas fa-heart\"></i> para \"Programa Superate Fundación Alberto Motta\""
+        footer: "Desarrollado por <span class=\"heart\">soynixonlopez</span> con <i class=\"fas fa-heart\"></i> para \"Programa Superate Fundación Alberto Motta\"",
+        existingAccount: "Si ya tienes una cuenta en GitHub, simplemente inicia sesión con tus credenciales.",
+        existingRepo: "Si ya clonaste el repositorio anteriormente:",
+        navigateFolder: "Navega a la carpeta donde guardaste el proyecto",
+        verifyRemote: "Verifica que el repositorio remoto esté configurado correctamente con:",
+        configureRemote: "Si no aparece ningún remoto o necesitas configurarlo:",
+        remoteInfo: "Esto configurará tu repositorio local para guardar los cambios en GitHub. Reemplaza la URL con la de tu repositorio.",
+        existingBranch: "Si ya tienes una rama creada:",
+        checkCurrentBranch: "Verifica en qué rama estás actualmente:",
+        switchToBranch: "Si necesitas cambiar a tu rama existente:"
     },
     en: {
         title: "Git Guide for Students - Collaborative Work",
         darkMode: "Dark Mode",
-        heroTitle: "Learn to Work in Team with Git",
+        heroTitle: "Git Commands",
         heroSubtitle: "Step by step guide for students starting in collaborative web development",
         initialSetup: "📌 Initial Setup",
         createAccount: "1. Create GitHub Account",
@@ -70,10 +79,10 @@ const translations = {
         goToGithub: "Go to github.com",
         createFreeAccount: "Create a free account",
         verifyEmail: "Verify your email",
-        configureGit: "2. Configure Git on your Computer",
+        configureGit: "3. Configure Git on your Computer",
         setupIdentity: "Set up your identity so Git knows who makes changes:",
         identityInfo: "This information will appear in all your commits and help identify who made each change.",
-        cloneRepo: "3. Clone the Project Repository",
+        cloneRepo: "2. Clone the Project Repository",
         getCopy: "To get a copy of the project on your computer:",
         cloneInfo: "This command creates an exact copy of the project on your computer. Your teacher will provide you with the correct repository URL.",
         workflow: "🔄 Collaborative Workflow",
@@ -117,6 +126,15 @@ const translations = {
         vscode: "Visual Studio Code",
         vscodeInfo: "Code editor with native Git integration.",
         downloadVscode: "Download VSCode",
-        footer: "Developed by <span class=\"heart\">soynixonlopez</span> with <i class=\"fas fa-heart\"></i> for \"Programa Superate Fundación Alberto Motta\""
+        footer: "Developed by <span class=\"heart\">soynixonlopez</span> with <i class=\"fas fa-heart\"></i> for \"Programa Superate Fundación Alberto Motta\"",
+        existingAccount: "If you already have a GitHub account, simply log in with your credentials.",
+        existingRepo: "If you have already cloned the repository:",
+        navigateFolder: "Navigate to the folder where you saved the project",
+        verifyRemote: "Verify that the remote repository is correctly configured with:",
+        configureRemote: "If no remote appears or you need to configure it:",
+        remoteInfo: "This will configure your local repository to save changes to GitHub. Replace the URL with your repository's URL.",
+        existingBranch: "If you already have a branch created:",
+        checkCurrentBranch: "Check which branch you are currently on:",
+        switchToBranch: "If you need to switch to your existing branch:"
     }
 }; 
