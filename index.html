@@ -5,134 +5,319 @@
     <meta keyword="git, remote">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-translate="title">Guía de Git para Estudiantes - Trabajo Colaborativo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1 data-translate="heroTitle">Aprende a Trabajar en Equipo con Git</h1>
-            <div class="header-controls">
-                <div class="language-selector">
-                    <button id="langEs" class="lang-btn active">ES</button>
-                    <button id="langEn" class="lang-btn">EN</button>
+    <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+        <div class="container">
+            <h1 class="navbar-brand mb-0" data-translate="heroTitle">Git Commands</h1>
+            <div class="d-flex align-items-center gap-3">
+                <div class="btn-group" role="group">
+                    <button id="langEs" class="btn btn-outline-primary active">ES</button>
+                    <button id="langEn" class="btn btn-outline-primary">EN</button>
                 </div>
-                <button id="darkModeToggle">
-                    <i class="fas fa-moon"></i>
+                <button id="darkModeToggle" class="btn btn-outline-primary">
+                    <i class="bi bi-moon-fill"></i>
                     <span data-translate="darkMode">Modo Oscuro</span>
                 </button>
             </div>
         </div>
     </header>
 
-    <main>
-        <section id="inicio" class="hero">
-            <div class="hero-content">
-                <h2 data-translate="heroTitle">Aprende a Trabajar en Equipo con Git</h2>
-                <p data-translate="heroSubtitle">Guía paso a paso para estudiantes que inician en el desarrollo web colaborativo</p>
+    <main class="main-content">
+        <section class="hero bg-primary text-white py-5 mb-5">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h2 class="display-4 mb-3" data-translate="heroTitle">Aprende a Trabajar en Equipo con Git</h2>
+                        <p class="lead" data-translate="heroSubtitle">Guía paso a paso para estudiantes que inician en el desarrollo web colaborativo</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="configuracion" class="tutorials">
-            <h2 data-translate="initialSetup">📌 Configuración Inicial</h2>
-            <div class="tutorial-grid">
-                <article class="tutorial-card">
-                    <h3 data-translate="createAccount">1. Crear Cuenta en GitHub</h3>
-                    <div class="step-content">
-                        <p data-translate="beforeStart">Antes de empezar, necesitas:</p>
-                        <ol>
-                            <li data-translate="goToGithub">Ir a github.com</li>
-                            <li data-translate="createFreeAccount">Crear una cuenta gratuita</li>
-                            <li data-translate="verifyEmail">Verificar tu correo electrónico</li>
-                        </ol>
-                    </div>
-                </article>
-
-                <article class="tutorial-card">
-                    <h3 data-translate="configureGit">2. Configurar Git en tu Computadora</h3>
-                    <div class="step-content">
-                        <p data-translate="setupIdentity">Configura tu identidad para que Git sepa quién hace los cambios:</p>
-                        <div class="command-box">
-                            <code>git config --global user.name "Tu Nombre"</code>
-                            <button class="copy-btn" onclick="copyCommand(this)"><i class="fas fa-copy"></i></button>
+        <section id="categorias" class="py-4">
+            <div class="container">
+                <h2 class="text-center mb-4">
+                    Selecciona una Categoría
+                </h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="category-buttons">
+                            <a href="#configuracion" class="category-btn">
+                                <i class="bi bi-gear-fill"></i>
+                                <span>Configuración</span>
+                            </a>
+                            <a href="#flujo-trabajo" class="category-btn">
+                                <i class="bi bi-people-fill"></i>
+                                <span>Flujo de Trabajo</span>
+                            </a>
+                            <a href="#comandos" class="category-btn">
+                                <i class="bi bi-terminal-fill"></i>
+                                <span>Comandos</span>
+                            </a>
                         </div>
-                        <div class="command-box">
-                            <code>git config --global user.email "tu@email.com"</code>
-                            <button class="copy-btn" onclick="copyCommand(this)"><i class="fas fa-copy"></i></button>
-                        </div>
-                        <p class="explanation" data-translate="identityInfo">Estos datos aparecerán en todos tus commits y ayudarán a identificar quién hizo cada cambio.</p>
                     </div>
-                </article>
-
-                <article class="tutorial-card">
-                    <h3 data-translate="cloneRepo">3. Clonar el Repositorio del Proyecto</h3>
-                    <div class="step-content">
-                        <p data-translate="getCopy">Para obtener una copia del proyecto en tu computadora:</p>
-                        <div class="command-box">
-                            <code>git clone https://github.com/tu-usuario/tu-repositorio.git</code>
-                            <button class="copy-btn" onclick="copyCommand(this)"><i class="fas fa-copy"></i></button>
-                        </div>
-                        <p class="explanation" data-translate="cloneInfo">Este comando crea una copia exacta del proyecto en tu computadora. El profesor te dará la URL correcta del repositorio.</p>
-                    </div>
-                </article>
+                </div>
             </div>
         </section>
 
-        <section id="flujo-trabajo" class="workflow">
-            <h2 data-translate="workflow">🔄 Flujo de Trabajo Colaborativo</h2>
-            <div class="workflow-steps">
-                <article class="workflow-card">
-                    <h3 data-translate="beforeWork">1. Antes de Empezar a Trabajar</h3>
-                    <div class="step-content">
-                        <p data-translate="updateLocal">Siempre actualiza tu copia local antes de empezar:</p>
-                        <div class="command-box">
-                            <code>git pull origin main</code>
-                            <button class="copy-btn" onclick="copyCommand(this)"><i class="fas fa-copy"></i></button>
+        <section id="configuracion" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5" data-translate="initialSetup">
+                    <span class="badge bg-primary rounded-pill mb-3">📌</span>
+                    Configuración Inicial
+                </h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <!-- Paso 1 -->
+                        <div class="step-card card shadow-lg mb-4 border-0">
+                            <div class="card-body p-4">
+                                <div class="step-number">1</div>
+                                <h3 class="card-title h4 mb-4" data-translate="createAccount">Crear Cuenta en GitHub</h3>
+                                <div class="step-content">
+                                    <p class="lead mb-4" data-translate="beforeStart">Antes de empezar, necesitas:</p>
+                                    <div class="list-group list-group-flush mb-4">
+                                        <div class="list-group-item bg-transparent">
+                                            <i class="bi bi-1-circle-fill text-primary me-2"></i>
+                                            <span data-translate="goToGithub">Ir a github.com</span>
+                                        </div>
+                                        <div class="list-group-item bg-transparent">
+                                            <i class="bi bi-2-circle-fill text-primary me-2"></i>
+                                            <span data-translate="createFreeAccount">Crear una cuenta gratuita</span>
+                                        </div>
+                                        <div class="list-group-item bg-transparent">
+                                            <i class="bi bi-3-circle-fill text-primary me-2"></i>
+                                            <span data-translate="verifyEmail">Verificar tu correo electrónico</span>
+                                        </div>
+                                    </div>
+                                    <div class="alert alert-secondary mb-4" data-translate="existingAccount">
+                                        <i class="bi bi-lightbulb-fill me-2"></i>
+                                        Si ya tienes una cuenta en GitHub, simplemente inicia sesión con tus credenciales.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p class="explanation" data-translate="updateInfo">Esto asegura que tienes los últimos cambios de tus compañeros.</p>
-                    </div>
-                </article>
 
-                <article class="workflow-card">
-                    <h3 data-translate="createBranch">2. Crear tu Rama de Trabajo</h3>
-                    <div class="step-content">
-                        <p data-translate="createBranchForChanges">Crea una rama para tus cambios:</p>
-                        <div class="command-box">
-                            <code>git checkout -b feature/tu-nombre-tarea</code>
-                            <button class="copy-btn" onclick="copyCommand(this)"><i class="fas fa-copy"></i></button>
+                        <!-- Paso 2 -->
+                        <div class="step-card card shadow-lg mb-4 border-0">
+                            <div class="card-body p-4">
+                                <div class="step-number">2</div>
+                                <h3 class="card-title h4 mb-4" data-translate="cloneRepo">Clonar el Repositorio del Proyecto</h3>
+                                <div class="step-content">
+                                    <p class="lead mb-4" data-translate="getCopy">Para obtener una copia del proyecto en tu computadora:</p>
+                                    <div class="command-box bg-light p-3 rounded mb-4">
+                                        <code>git clone https://github.com/tu-usuario/tu-repositorio.git</code>
+                                        <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCommand(this)">
+                                            <i class="bi bi-clipboard"></i>
+                                        </button>
+                                    </div>
+                                    <div class="alert alert-secondary mb-4" data-translate="cloneInfo">
+                                        <i class="bi bi-lightbulb-fill me-2"></i>
+                                        Este comando crea una copia exacta del proyecto en tu computadora. El profesor te dará la URL correcta del repositorio.
+                                    </div>
+                                    
+                                    <div class="alert alert-info mb-4" data-translate="existingRepo">
+                                        <i class="bi bi-info-circle-fill me-2"></i>
+                                        Si ya clonaste el repositorio anteriormente:
+                                    </div>
+                                    
+                                    <div class="list-group list-group-flush mb-4">
+                                        <div class="list-group-item bg-transparent">
+                                            <i class="bi bi-folder-fill text-primary me-2"></i>
+                                            <span data-translate="navigateFolder">Navega a la carpeta donde guardaste el proyecto</span>
+                                        </div>
+                                        <div class="list-group-item bg-transparent">
+                                            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                            <span data-translate="verifyRemote">Verifica que el repositorio remoto esté configurado correctamente con:</span>
+                                            <div class="command-box bg-light p-3 rounded mt-2">
+                                                <code>git remote -v</code>
+                                                <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCommand(this)">
+                                                    <i class="bi bi-clipboard"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item bg-transparent">
+                                            <i class="bi bi-gear-fill text-primary me-2"></i>
+                                            <span data-translate="configureRemote">Si no aparece ningún remoto o necesitas configurarlo:</span>
+                                            <div class="command-box bg-light p-3 rounded mt-2">
+                                                <code>git remote add origin https://github.com/tu-usuario/tu-repositorio.git</code>
+                                                <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCommand(this)">
+                                                    <i class="bi bi-clipboard"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p class="explanation" data-translate="branchExample">Ejemplo: <code>git checkout -b feature/juan-login</code></p>
-                        <p class="explanation" data-translate="branchInfo">Esto crea un espacio seguro para tus cambios sin afectar el trabajo de otros.</p>
-                    </div>
-                </article>
 
-                <article class="workflow-card">
-                    <h3 data-translate="saveChanges">3. Guardar tus Cambios</h3>
-                    <div class="step-content">
-                        <p data-translate="afterChanges">Después de hacer cambios en los archivos:</p>
-                        <div class="command-box">
-                            <code>git add .</code>
-                            <button class="copy-btn" onclick="copyCommand(this)"><i class="fas fa-copy"></i></button>
+                        <!-- Paso 3 -->
+                        <div class="step-card card shadow-lg mb-4 border-0">
+                            <div class="card-body p-4">
+                                <div class="step-number">3</div>
+                                <h3 class="card-title h4 mb-4" data-translate="configureGit">Configurar Git en tu Computadora</h3>
+                                <div class="step-content">
+                                    <p class="lead mb-4" data-translate="setupIdentity">Configura tu identidad para que Git sepa quién hace los cambios:</p>
+                                    <div class="command-box bg-light p-3 rounded mb-4">
+                                        <code>git config --global user.name "Tu Nombre"</code>
+                                        <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCommand(this)">
+                                            <i class="bi bi-clipboard"></i>
+                                        </button>
+                                    </div>
+                                    <div class="command-box bg-light p-3 rounded mb-4">
+                                        <code>git config --global user.email "tu@email.com"</code>
+                                        <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCommand(this)">
+                                            <i class="bi bi-clipboard"></i>
+                                        </button>
+                                    </div>
+                                    <div class="alert alert-secondary" data-translate="identityInfo">
+                                        <i class="bi bi-lightbulb-fill me-2"></i>
+                                        Estos datos aparecerán en todos tus commits y ayudarán a identificar quién hizo cada cambio.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="command-box">
-                            <code>git commit -m "Descripción clara de tus cambios"</code>
-                            <button class="copy-btn" onclick="copyCommand(this)"><i class="fas fa-copy"></i></button>
-                        </div>
-                        <p class="explanation" data-translate="commitExample">Ejemplo: <code>git commit -m "Agrega formulario de login"</code></p>
                     </div>
-                </article>
+                </div>
+            </div>
+        </section>
 
-                <article class="workflow-card">
-                    <h3 data-translate="shareChanges">4. Compartir tus Cambios</h3>
-                    <div class="step-content">
-                        <p data-translate="uploadChanges">Sube tus cambios a GitHub:</p>
-                        <div class="command-box">
-                            <code>git push origin feature/tu-nombre-tarea</code>
-                            <button class="copy-btn" onclick="copyCommand(this)"><i class="fas fa-copy"></i></button>
+        <section id="flujo-trabajo" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5" data-translate="workflow">
+                    <span class="badge bg-primary rounded-pill mb-3">🔄</span>
+                    Flujo de Trabajo Colaborativo
+                </h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <!-- Paso 1 -->
+                        <div class="step-card card shadow-lg mb-4 border-0">
+                            <div class="card-body p-4">
+                                <div class="step-number">1</div>
+                                <h3 class="card-title h4 mb-4" data-translate="beforeWork">Antes de Empezar a Trabajar</h3>
+                                <div class="step-content">
+                                    <p class="lead mb-4" data-translate="updateLocal">Siempre actualiza tu copia local antes de empezar:</p>
+                                    <div class="command-box bg-light p-3 rounded mb-4">
+                                        <code>git pull origin main</code>
+                                        <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCommand(this)">
+                                            <i class="bi bi-clipboard"></i>
+                                        </button>
+                                    </div>
+                                    <div class="alert alert-secondary" data-translate="updateInfo">
+                                        <i class="bi bi-lightbulb-fill me-2"></i>
+                                        Esto asegura que tienes los últimos cambios de tus compañeros.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p class="explanation" data-translate="prInfo">Luego, ve a GitHub y crea un Pull Request para que el profesor revise tus cambios.</p>
+
+                        <!-- Paso 2 -->
+                        <div class="step-card card shadow-lg mb-4 border-0">
+                            <div class="card-body p-4">
+                                <div class="step-number">2</div>
+                                <h3 class="card-title h4 mb-4" data-translate="createBranch">Crear tu Rama de Trabajo</h3>
+                                <div class="step-content">
+                                    <p class="lead mb-4" data-translate="createBranchForChanges">Crea una rama para tus cambios:</p>
+                                    <div class="command-box bg-light p-3 rounded mb-4">
+                                        <code>git checkout -b feature/tu-nombre-tarea</code>
+                                        <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCommand(this)">
+                                            <i class="bi bi-clipboard"></i>
+                                        </button>
+                                    </div>
+                                    <div class="alert alert-secondary mb-4" data-translate="branchExample">
+                                        <i class="bi bi-lightbulb-fill me-2"></i>
+                                        Ejemplo: <code>git checkout -b feature/juan-login</code>
+                                    </div>
+                                    <div class="alert alert-secondary mb-4" data-translate="branchInfo">
+                                        <i class="bi bi-lightbulb-fill me-2"></i>
+                                        Esto crea un espacio seguro para tus cambios sin afectar el trabajo de otros.
+                                    </div>
+                                    
+                                    <div class="alert alert-info mb-4" data-translate="existingBranch">
+                                        <i class="bi bi-info-circle-fill me-2"></i>
+                                        Si ya tienes una rama creada:
+                                    </div>
+                                    
+                                    <div class="list-group list-group-flush mb-4">
+                                        <div class="list-group-item bg-transparent">
+                                            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                                            <span data-translate="checkCurrentBranch">Verifica en qué rama estás actualmente:</span>
+                                            <div class="command-box bg-light p-3 rounded mt-2">
+                                                <code>git branch</code>
+                                                <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCommand(this)">
+                                                    <i class="bi bi-clipboard"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item bg-transparent">
+                                            <i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>
+                                            <span data-translate="switchToBranch">Si necesitas cambiar a tu rama existente:</span>
+                                            <div class="command-box bg-light p-3 rounded mt-2">
+                                                <code>git checkout feature/tu-nombre-tarea</code>
+                                                <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCommand(this)">
+                                                    <i class="bi bi-clipboard"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Paso 3 -->
+                        <div class="step-card card shadow-lg mb-4 border-0">
+                            <div class="card-body p-4">
+                                <div class="step-number">3</div>
+                                <h3 class="card-title h4 mb-4" data-translate="saveChanges">Guardar tus Cambios</h3>
+                                <div class="step-content">
+                                    <p class="lead mb-4" data-translate="afterChanges">Después de hacer cambios en los archivos:</p>
+                                    <div class="command-box bg-light p-3 rounded mb-4">
+                                        <code>git add .</code>
+                                        <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCommand(this)">
+                                            <i class="bi bi-clipboard"></i>
+                                        </button>
+                                    </div>
+                                    <div class="command-box bg-light p-3 rounded mb-4">
+                                        <code>git commit -m "Descripción clara de tus cambios"</code>
+                                        <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCommand(this)">
+                                            <i class="bi bi-clipboard"></i>
+                                        </button>
+                                    </div>
+                                    <div class="alert alert-secondary" data-translate="commitExample">
+                                        <i class="bi bi-lightbulb-fill me-2"></i>
+                                        Ejemplo: <code>git commit -m "Agrega formulario de login"</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Paso 4 -->
+                        <div class="step-card card shadow-lg mb-4 border-0">
+                            <div class="card-body p-4">
+                                <div class="step-number">4</div>
+                                <h3 class="card-title h4 mb-4" data-translate="shareChanges">Compartir tus Cambios</h3>
+                                <div class="step-content">
+                                    <p class="lead mb-4" data-translate="uploadChanges">Sube tus cambios a GitHub:</p>
+                                    <div class="command-box bg-light p-3 rounded mb-4">
+                                        <code>git push origin feature/tu-nombre-tarea</code>
+                                        <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCommand(this)">
+                                            <i class="bi bi-clipboard"></i>
+                                        </button>
+                                    </div>
+                                    <div class="alert alert-secondary" data-translate="prInfo">
+                                        <i class="bi bi-lightbulb-fill me-2"></i>
+                                        Luego, ve a GitHub y crea un Pull Request para que el profesor revise tus cambios.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </article>
+                </div>
             </div>
         </section>
 
@@ -140,15 +325,27 @@
             <h2 data-translate="essentialCommands">📋 Comandos Esenciales</h2>
             <div class="command-grid">
                 <article class="command-card">
+                    <div class="command-icon-box text-center mb-3">
+                        <span class="command-icon-bg d-inline-flex align-items-center justify-content-center">
+                            <i class="bi bi-clipboard text-primary" style="font-size:2rem;"></i>
+                        </span>
+                    </div>
                     <h3 data-translate="viewStatus">Ver Estado del Proyecto</h3>
-                    <div class="command-box">
+                    <div class="command-box bg-light p-3 rounded mb-4">
                         <code>git status</code>
-                        <button class="copy-btn" onclick="copyCommand(this)"><i class="fas fa-copy"></i></button>
+                        <button class="btn btn-sm btn-outline-primary copy-btn" onclick="copyCommand(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
                     </div>
                     <p class="explanation" data-translate="statusInfo">Muestra qué archivos has cambiado y cuáles están listos para ser guardados.</p>
                 </article>
 
                 <article class="command-card">
+                    <div class="command-icon-box text-center mb-3">
+                        <span class="command-icon-bg d-inline-flex align-items-center justify-content-center">
+                            <i class="bi bi-clipboard text-primary" style="font-size:2rem;"></i>
+                        </span>
+                    </div>
                     <h3 data-translate="viewHistory">Ver Historial de Cambios</h3>
                     <div class="command-box">
                         <code>git log</code>
@@ -158,6 +355,11 @@
                 </article>
 
                 <article class="command-card">
+                    <div class="command-icon-box text-center mb-3">
+                        <span class="command-icon-bg d-inline-flex align-items-center justify-content-center">
+                            <i class="bi bi-clipboard text-primary" style="font-size:2rem;"></i>
+                        </span>
+                    </div>
                     <h3 data-translate="switchBranches">Cambiar entre Ramas</h3>
                     <div class="command-box">
                         <code>git checkout branch-name</code>
@@ -167,6 +369,11 @@
                 </article>
 
                 <article class="command-card">
+                    <div class="command-icon-box text-center mb-3">
+                        <span class="command-icon-bg d-inline-flex align-items-center justify-content-center">
+                            <i class="bi bi-clipboard text-primary" style="font-size:2rem;"></i>
+                        </span>
+                    </div>
                     <h3 data-translate="listBranches">Listar Todas las Ramas</h3>
                     <div class="command-box">
                         <code>git branch</code>
@@ -176,6 +383,11 @@
                 </article>
 
                 <article class="command-card">
+                    <div class="command-icon-box text-center mb-3">
+                        <span class="command-icon-bg d-inline-flex align-items-center justify-content-center">
+                            <i class="bi bi-clipboard text-primary" style="font-size:2rem;"></i>
+                        </span>
+                    </div>
                     <h3 data-translate="discardChanges">Descartar Cambios</h3>
                     <div class="command-box">
                         <code>git checkout -- .</code>
@@ -185,6 +397,11 @@
                 </article>
 
                 <article class="command-card">
+                    <div class="command-icon-box text-center mb-3">
+                        <span class="command-icon-bg d-inline-flex align-items-center justify-content-center">
+                            <i class="bi bi-clipboard text-primary" style="font-size:2rem;"></i>
+                        </span>
+                    </div>
                     <h3 data-translate="viewRemotes">Ver Repositorios Remotos</h3>
                     <div class="command-box">
                         <code>git remote -v</code>
@@ -194,6 +411,11 @@
                 </article>
 
                 <article class="command-card">
+                    <div class="command-icon-box text-center mb-3">
+                        <span class="command-icon-bg d-inline-flex align-items-center justify-content-center">
+                            <i class="bi bi-clipboard text-primary" style="font-size:2rem;"></i>
+                        </span>
+                    </div>
                     <h3 data-translate="compareChanges">Comparar Cambios</h3>
                     <div class="command-box">
                         <code>git diff</code>
@@ -203,6 +425,11 @@
                 </article>
 
                 <article class="command-card">
+                    <div class="command-icon-box text-center mb-3">
+                        <span class="command-icon-bg d-inline-flex align-items-center justify-content-center">
+                            <i class="bi bi-clipboard text-primary" style="font-size:2rem;"></i>
+                        </span>
+                    </div>
                     <h3 data-translate="deleteBranch">Eliminar una Rama</h3>
                     <div class="command-box">
                         <code>git branch -d branch-name</code>
@@ -246,15 +473,30 @@
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p data-translate="footer">Desarrollado por <span class="name">soynixonlopez</span> con 💚 para "Programa Superate Fundación Alberto Motta"</p>
-            <div class="social-links">
-                <a href="https://github.com/soynixonlopez" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/nixonlopez/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8 text-start">
+                    <p class="mb-0" data-translate="footer">
+                        Desarrollado por <span class="text-danger">soynixonlopez <i class="bi bi-heart-fill text-danger"></i> para "Programa Superate Fundación Alberto Motta"
+                    </p>
+                </div>
+                <div class="col-md-4 text-end">
+                    <div class="social-links">
+                        <a href="https://github.com/soynixonlopez" target="_blank" class="text-white me-3">
+                            <i class="bi bi-github fs-4"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/nixonlopez/" target="_blank" class="text-white">
+                            <i class="bi bi-linkedin fs-4"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
