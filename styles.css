@@ -1079,6 +1079,14 @@ body.dark-mode .navbar {
     margin-top: 2rem;
 }
 
+.quick-command-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
 .quick-command-card {
     background: var(--card-bg);
     border-radius: 15px;
@@ -1094,7 +1102,7 @@ body.dark-mode .navbar {
     border-color: var(--secondary-color);
 }
 
-.quick-command-icon {
+.quick-command-step {
     width: 50px;
     height: 50px;
     background: var(--secondary-color);
@@ -1102,12 +1110,27 @@ body.dark-mode .navbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
+}
+
+.quick-command-step p {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quick-command-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .quick-command-icon i {
-    font-size: 1.5rem;
-    color: white;
+    font-size: 2rem;
+    color: var(--secondary-color);
 }
 
 .quick-command-content {
