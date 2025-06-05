@@ -2,946 +2,124 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta keyword="git, remote, collaboration, conflicts">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-translate="title">Blog de Git: Guía Completa para Trabajo en Equipo</title>
-    <!-- Bootstrap CSS -->
+    <meta name="keywords" content="recursos, estudiantes, programación, git, firebase, javascript, python, vscode, flet, vite, web, tutoriales, aprendizaje">
+    <title>EXPO TECH RESOURCES</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
-        <div class="container">
-            <h1 class="navbar-brand mb-0" data-translate="heroTitle">Git Blog</h1>
-            <div class="d-flex align-items-center gap-3">
-                <div class="btn-group" role="group">
-                    <button id="langEs" class="btn btn-outline-primary active">ES</button>
-                    <button id="langEn" class="btn btn-outline-primary">EN</button>
-                </div>
-                <button id="darkModeToggle" class="btn btn-outline-primary">
-                    <i class="bi bi-moon-fill"></i>
-                    <span data-translate="darkMode">Modo Oscuro</span>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <main class="main-content">
-        <!-- Hero Section -->
-        <section class="hero bg-primary text-white">
-            <div class="container">
-                <div class="row justify-content-center text-center py-4">
-                    <div class="col-lg-8">
-                        <h2 class="display-4 mb-3">Git para Trabajo en Equipo</h2>
-                        <p class="lead mb-0">Una guía completa para evitar y resolver conflictos en proyectos colaborativos</p>
+    <header-component></header-component>
+    <main>
+        <section class="hero-homepage position-relative text-white py-5">
+            <div class="container position-relative z-2">
+                <div class="row align-items-center justify-content-center text-center">
+                    <div class="col-lg-7 mx-auto">
+                        <h1 class="display-2 fw-bold mb-3">Bienvenido a <span class="text-warning">EXPO TECH RESOURCES</span></h1>
+                        <p class="lead mb-4">Tu portal de recursos, guías y materiales para construir proyectos web modernos.<br>¡Aprende, explora y crea con las mejores herramientas!</p>
+                        <a href="#recursos-rapidos" class="btn btn-warning btn-lg shadow px-5 py-3 fs-4">Ver Recursos Destacados <i class="bi bi-arrow-down-circle ms-2"></i></a>
                     </div>
                 </div>
             </div>
-            <!-- Decorative elements -->
-            <div class="hero-decorations">
-                <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/git-branch-24.svg" class="hero-icon hero-icon-1" alt="branch">
-                <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/git-commit-24.svg" class="hero-icon hero-icon-2" alt="commit">
-                <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/git-merge-24.svg" class="hero-icon hero-icon-3" alt="merge">
-                <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/git-pull-request-24.svg" class="hero-icon hero-icon-4" alt="pull request">
+            <!-- Decorative SVG or icons -->
+            <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/git-branch-24.svg" class="decor-svg decor-git-branch" alt="git branch">
+            <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/git-commit-24.svg" class="decor-svg decor-git-commit" alt="git commit">
+            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/icons/fire.svg" class="decor-svg decor-fire" alt="firebase">
+            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/icons/filetype-js.svg" class="decor-svg decor-js" alt="js">
+            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/icons/filetype-py.svg" class="decor-svg decor-py" alt="python">
+            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/icons/code-slash.svg" class="decor-svg decor-code" alt="code">
+        </section>
+        <section id="recursos-rapidos" class="container py-5">
+            <div class="row text-center mb-4">
+                <h2 class="fw-bold">Acceso Rápido a Recursos</h2>
+                <p class="text-muted">Explora las secciones más importantes para tu aprendizaje</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-git fs-1 text-primary mb-3"></i>
+                            <h5 class="card-title">Git y Control de Versiones</h5>
+                            <p class="card-text">Aprende a trabajar en equipo y gestionar tu código como un profesional.</p>
+                            <a href="pages/git.html" class="btn btn-outline-primary">Ver Guía</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-fire fs-1 text-danger mb-3"></i>
+                            <h5 class="card-title">Firebase para Web</h5>
+                            <p class="card-text">Descubre cómo integrar autenticación, base de datos y más en tus proyectos.</p>
+                            <a href="firebase/instalacion.html" class="btn btn-outline-danger">Ver Recursos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-filetype-js fs-1 text-warning mb-3"></i>
+                            <h5 class="card-title">Fundamentos de JavaScript</h5>
+                            <p class="card-text">Domina el lenguaje esencial para el desarrollo web interactivo.</p>
+                            <a href="javascript/index.html" class="btn btn-outline-warning">Empezar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-filetype-py fs-1 text-info mb-3"></i>
+                            <h5 class="card-title">Fundamentos de Python</h5>
+                            <p class="card-text">Aprende Python desde cero y potencia tus proyectos web y de datos.</p>
+                            <a href="python/index.html" class="btn btn-outline-info">Empezar</a>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-code-slash fs-1 text-success mb-3"></i>
+                            <h5 class="card-title">VS Code y Extensiones</h5>
+                            <p class="card-text">Configura tu entorno de desarrollo para máxima productividad.</p>
+                            <a href="vscode/index.html" class="btn btn-outline-success">Ver Guía</a>
+                        </div>
+                        </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-lightning-fill fs-1 text-primary mb-3"></i>
+                            <h5 class="card-title">Flet (Python Web)</h5>
+                            <p class="card-text">Crea apps web modernas con Python y Flet fácilmente.</p>
+                            <a href="flet/index.html" class="btn btn-outline-primary">Ver Recursos</a>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-lightning-charge fs-1 text-warning mb-3"></i>
+                            <h5 class="card-title">Vite: Servidor Local Rápido</h5>
+                            <p class="card-text">Configura y lanza tu entorno de desarrollo web en segundos.</p>
+                            <a href="vite/index.html" class="btn btn-outline-warning">Ver Guía</a>
+                        </div>
+                        </div>
+                </div>
             </div>
         </section>
-
-        <!-- Quick Commands Section -->
-        <section id="comandos-rapidos" class="container mb-5 mt-4">
+        <section class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <h2 class="section-title">
-                        <span class="emoji-title">⚡</span>
-                        Comandos Rápidos
-                    </h2>
-                    <p class="section-subtitle">¡Sube tus cambios en segundos!</p>
-                </div>
-            </div>
-
-            <div class="row justify-content-center mt-4">
-                <div class="col-lg-10">
-                    <div class="quick-commands-container">
-                        <!-- Comando Rápido 1: Status -->
-                        <div class="quick-command-card">
-                            <div class="quick-command-header">
-                                <div class="quick-command-step">
-                                    <p>1</p>
-                                </div>
-                                <div class="quick-command-icon">
-                                    <i class="bi bi-eye-fill"></i>
-                                </div>
-                            </div>
-                            <div class="quick-command-content">
-                                <div class="command-box bg-light p-2 rounded mb-2">
-                                    <code>git status</code>
-                                    <button class="btn btn-sm btn-outline-primary copy-btn">
-                                        <i class="bi bi-clipboard"></i>
-                                    </button>
-                                </div>
-                                <p class="quick-command-desc">Ver qué archivos has modificado 👀</p>
-                            </div>
-                        </div>
-
-                        <!-- Comando Rápido 2: Add -->
-                        <div class="quick-command-card">
-                            <div class="quick-command-header">
-                                <div class="quick-command-step">
-                                    <p>2</p>
-                                </div>
-                                <div class="quick-command-icon">
-                                    <i class="bi bi-plus-circle-fill"></i>
-                                </div>
-                            </div>
-                            <div class="quick-command-content">
-                                <div class="command-box bg-light p-2 rounded mb-2">
-                                    <code>git add .</code>
-                                    <button class="btn btn-sm btn-outline-primary copy-btn">
-                                        <i class="bi bi-clipboard"></i>
-                                    </button>
-                                </div>
-                                <p class="quick-command-desc">Preparar todos los cambios ✨</p>
-                            </div>
-                        </div>
-
-                        <!-- Comando Rápido 3: Commit -->
-                        <div class="quick-command-card">
-                            <div class="quick-command-header">
-                                <div class="quick-command-step">
-                                    <p>3</p>
-                                </div>
-                                <div class="quick-command-icon">
-                                    <i class="bi bi-save-fill"></i>
-                                </div>
-                            </div>
-                        
-                            <div class="quick-command-content">
-                                <div class="command-box bg-light p-2 rounded mb-2">
-                                    <code>git commit -m "tu mensaje"</code>
-                                    <button class="btn btn-sm btn-outline-primary copy-btn">
-                                        <i class="bi bi-clipboard"></i>
-                                    </button>
-                                </div>
-                                <p class="quick-command-desc">Guardar los cambios 💾</p>
-                            </div>
-                        </div>
-
-                        <!-- Comando Rápido 4: Push -->
-                        <div class="quick-command-card">
-                            <div class="quick-command-header">
-                                <div class="quick-command-step">
-                                    <p>4</p>
-                                </div>
-                                <div class="quick-command-icon">
-                                    <i class="bi bi-cloud-upload-fill"></i>
-                                </div>
-                            </div>
-                            
-                            <div class="quick-command-content">
-                                <div class="command-box bg-light p-2 rounded mb-2">
-                                    <code>git push origin main</code>
-                                    <button class="btn btn-sm btn-outline-primary copy-btn">
-                                        <i class="bi bi-clipboard"></i>
-                                    </button>
-                                </div>
-                                <p class="quick-command-desc">Subir los cambios 🚀</p>
-                            </div>
-                        </div>
-
-                        <!-- Comando Rápido 5: Pull -->
-                        <div class="quick-command-card">
-                            <div class="quick-command-header">
-                                <div class="quick-command-step">
-                                    <p>5</p>
-                                </div>
-                                <div class="quick-command-icon">
-                                    <i class="bi bi-cloud-download-fill"></i>
-                                </div>
-                            </div>
-                            
-                            <div class="quick-command-content">
-                                <div class="command-box bg-light p-2 rounded mb-2">
-                                    <code>git pull origin main</code>
-                                    <button class="btn btn-sm btn-outline-primary copy-btn">
-                                        <i class="bi bi-clipboard"></i>
-                                    </button>
-                                </div>
-                                <p class="quick-command-desc">Actualizar tu código 🔄</p>
-                            </div>
-                        </div>
-
-                        <!-- Todo en Uno -->
-                        <div class="quick-command-card special-card">
-                            <div class="quick-command-icon">
-                                <i class="bi bi-lightning-fill"></i>
-                            </div>
-                            <div class="quick-command-content">
-                                <h4 class="mb-2">¡Todo en Uno!</h4>
-                                <div class="command-box bg-light p-2 rounded mb-2">
-                                    <code>git add . && git commit -m "cambios" && git push</code>
-                                    <button class="btn btn-sm btn-outline-primary copy-btn">
-                                        <i class="bi bi-clipboard"></i>
-                                    </button>
-                                </div>
-                                <p class="quick-command-desc">¡Sube todo de una vez! 🚀✨</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="quick-tip mt-4">
-                        <div class="alert alert-info">
-                            <i class="bi bi-lightbulb-fill"></i>
-                            <strong>Tip Pro:</strong> Escribe estos comandos en tus apuntes de clase para que no los olvides.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Table of Contents -->
-        <section class="container mb-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h3 class="card-title">Contenido</h3>
-                            <div class="list-group list-group-flush">
-                                <a href="#configuracion-inicial" class="list-group-item list-group-item-action">
-                                    <i class="bi bi-1-circle-fill me-2"></i>Configuración Inicial y Comandos Básicos
-                                </a>
-                                <a href="#fundamentos" class="list-group-item list-group-item-action">
-                                    <i class="bi bi-2-circle-fill me-2"></i>Fundamentos del Trabajo en Equipo
-                                </a>
-                                <a href="#actualizacion" class="list-group-item list-group-item-action">
-                                    <i class="bi bi-3-circle-fill me-2"></i>Mantén tu Código Actualizado
-                                </a>
-                                <a href="#conflictos" class="list-group-item list-group-item-action">
-                                    <i class="bi bi-4-circle-fill me-2"></i>Resolución de Conflictos
-                                </a>
-                                <a href="#comandos-avanzados" class="list-group-item list-group-item-action">
-                                    <i class="bi bi-5-circle-fill me-2"></i>Comandos Avanzados
-                                </a>
-                                <a href="#mejores-practicas" class="list-group-item list-group-item-action">
-                                    <i class="bi bi-6-circle-fill me-2"></i>Mejores Prácticas
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Configuración Inicial Section -->
-        <section id="configuracion-inicial" class="container mb-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <article class="blog-post">
-                        <h2 class="mb-4">Configuración Inicial y Comandos Básicos</h2>
-                        
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h3 class="h5 mb-3">⚙️ Paso 1: Configurar tus Credenciales</h3>
-                                <p class="text-muted mb-3">Antes de empezar, configura tu identidad en Git:</p>
-                                
-                                <div class="command-box bg-light p-3 rounded mb-3">
-                                    <code>git config --global user.name "Tu Nombre"</code>
-                                    <button class="btn btn-sm btn-outline-primary copy-btn">
-                                        <i class="bi bi-clipboard"></i>
-                                    </button>
-                                </div>
-                                <div class="command-box bg-light p-3 rounded mb-3">
-                                    <code>git config --global user.email "tu@email.com"</code>
-                                    <button class="btn btn-sm btn-outline-primary copy-btn">
-                                        <i class="bi bi-clipboard"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h3 class="h5 mb-3">🔍 Paso 2: Verificar Repositorio Remoto</h3>
-                                <p class="text-muted mb-3">Comprueba si tu repositorio está correctamente conectado:</p>
-                                
-                                <div class="command-box bg-light p-3 rounded mb-3">
-                                    <code>git remote -v</code>
-                                    <button class="btn btn-sm btn-outline-primary copy-btn">
-                                        <i class="bi bi-clipboard"></i>
-                                    </button>
-                                </div>
-                                <div class="alert alert-info">
-                                    <i class="bi bi-info-circle-fill me-2"></i>
-                                    Si no ves ningún remoto, necesitas configurarlo:
-                                    <div class="command-box bg-light p-3 rounded mt-2">
-                                        <code>git remote add origin https://github.com/usuario/repositorio.git</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h3 class="h5 mb-3">📝 Paso 3: Comandos Básicos para Subir Cambios</h3>
-                                
-                                <div class="alert alert-warning mb-3">
-                                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
-                                    <strong>¡Importante!</strong> Siempre verifica en qué rama estás:
-                                    <div class="command-box bg-light p-3 rounded mt-2">
-                                        <code>git branch</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="sequence-box">
-                                    <div class="step mb-3">
-                                        <h4 class="h6">1. Ver el Estado de tus Archivos</h4>
-                                        <div class="command-box bg-light p-3 rounded">
-                                            <code>git status</code>
-                                            <button class="btn btn-sm btn-outline-primary copy-btn">
-                                                <i class="bi bi-clipboard"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="step mb-3">
-                                        <h4 class="h6">2. Agregar Archivos Modificados</h4>
-                                        <div class="command-box bg-light p-3 rounded">
-                                            <code>git add .</code>
-                                            <button class="btn btn-sm btn-outline-primary copy-btn">
-                                                <i class="bi bi-clipboard"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="step mb-3">
-                                        <h4 class="h6">3. Crear un Commit</h4>
-                                        <div class="command-box bg-light p-3 rounded">
-                                            <code>git commit -m "Descripción clara de tus cambios"</code>
-                                            <button class="btn btn-sm btn-outline-primary copy-btn">
-                                                <i class="bi bi-clipboard"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="step mb-3">
-                                        <h4 class="h6">4. Subir los Cambios</h4>
-                                        <div class="command-box bg-light p-3 rounded">
-                                            <code>git push origin nombre-de-tu-rama</code>
-                                            <button class="btn btn-sm btn-outline-primary copy-btn">
-                                                <i class="bi bi-clipboard"></i>
-                                            </button>
-                                        </div>
-                                        <p class="text-muted mt-2">
-                                            Reemplaza 'nombre-de-tu-rama' con 'main' o el nombre de tu rama actual
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="alert alert-success mt-3">
-                                    <i class="bi bi-lightbulb-fill me-2"></i>
-                                    <strong>Consejo:</strong> Si es la primera vez que subes una rama nueva, usa:
-                                    <div class="command-box bg-light p-3 rounded mt-2">
-                                        <code>git push -u origin nombre-de-tu-rama</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Fundamentos Section -->
-        <section id="fundamentos" class="container mb-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <article class="blog-post">
-                        <h2 class="mb-4">Fundamentos del Trabajo en Equipo</h2>
-                        
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h3 class="h5 mb-3">🌟 Regla de Oro</h3>
-                                <p class="alert alert-info">
-                                    <strong>Siempre actualiza antes de empezar a trabajar:</strong><br>
-                                    Este es el principio más importante del trabajo en equipo con Git.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="mb-4">
-                            <h3 class="h5">Paso 1: Actualizar tu Repositorio</h3>
-                            <div class="command-box bg-light p-3 rounded mb-3">
-                                <code>git pull origin main</code>
-                                <button class="btn btn-sm btn-outline-primary copy-btn">
-                                    <i class="bi bi-clipboard"></i>
-                                </button>
-                            </div>
-                            <p class="text-muted">Este comando descarga todos los cambios recientes del repositorio principal.</p>
-                        </div>
-
-                        <div class="mb-4">
-                            <h3 class="h5">Paso 2: Crear tu Rama de Trabajo</h3>
-                            <div class="command-box bg-light p-3 rounded mb-3">
-                                <code>git checkout -b nombre-de-tu-rama</code>
-                                <button class="btn btn-sm btn-outline-primary copy-btn">
-                                    <i class="bi bi-clipboard"></i>
-                                </button>
-                            </div>
-                            <p class="text-muted">Si ya tienes una rama, puedes usar: <code>git checkout nombre-de-tu-rama</code> para cambiar a ella.</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Actualización Section -->
-        <section id="actualizacion" class="container mb-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <article class="blog-post">
-                        <h2 class="mb-4">Mantén tu Código Actualizado</h2>
-                        
-                        <div class="alert alert-warning mb-4">
-                            <h4 class="alert-heading"><i class="bi bi-exclamation-triangle-fill"></i> ¿Por qué es importante?</h4>
-                            <p>Trabajar con código desactualizado es la principal causa de conflictos en Git. Mantener tu código actualizado es como mantener tu teléfono actualizado: evita problemas y te da nuevas características.</p>
-                        </div>
-
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h3 class="h5 mb-3">📱 Flujo de Trabajo Diario</h3>
-                                <ol class="list-group list-group-numbered">
-                                    <li class="list-group-item">
-                                        <strong>Antes de empezar a trabajar:</strong>
-                                        <div class="command-box bg-light p-3 rounded mt-2">
-                                            <code>git pull --rebase origin main</code>
-                                            <button class="btn btn-sm btn-outline-primary copy-btn">
-                                                <i class="bi bi-clipboard"></i>
-                                            </button>
-                                        </div>
-                                        <p class="text-muted mt-2">Esto actualiza tu rama con los últimos cambios de main.</p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <strong>Durante el trabajo:</strong>
-                                        <div class="command-box bg-light p-3 rounded mt-2">
-                                            <code>git fetch origin</code>
-                                            <button class="btn btn-sm btn-outline-primary copy-btn">
-                                                <i class="bi bi-clipboard"></i>
-                                            </button>
-                                        </div>
-                                        <p class="text-muted mt-2">Verifica si hay cambios nuevos sin aplicarlos.</p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <strong>Antes de subir tus cambios:</strong>
-                                        <div class="command-box bg-light p-3 rounded mt-2">
-                                            <code>git pull --rebase origin main</code>
-                                            <button class="btn btn-sm btn-outline-primary copy-btn">
-                                                <i class="bi bi-clipboard"></i>
-                                            </button>
-                                        </div>
-                                        <p class="text-muted mt-2">Asegúrate de que tus cambios estén actualizados antes de subirlos.</p>
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
-
-                        <div class="mb-4">
-                            <h3 class="h5">🔄 Comandos de Actualización</h3>
-                            
-                            <div class="card mb-3">
-                                <div class="card-body">
-                                    <h4 class="h6">1. Ver Cambios Remotos</h4>
-                                    <div class="command-box bg-light p-3 rounded">
-                                        <code>git fetch origin</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                    <p class="text-muted mt-2">Descarga información sobre cambios sin aplicarlos.</p>
-                                </div>
-                            </div>
-
-                            <div class="card mb-3">
-                                <div class="card-body">
-                                    <h4 class="h6">2. Ver Diferencias</h4>
-                                    <div class="command-box bg-light p-3 rounded">
-                                        <code>git diff origin/main..HEAD</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                    <p class="text-muted mt-2">Muestra las diferencias entre tu rama y main.</p>
-                                </div>
-                            </div>
-
-                            <div class="card mb-3">
-                                <div class="card-body">
-                                    <h4 class="h6">3. Actualizar con Rebase</h4>
-                                    <div class="command-box bg-light p-3 rounded">
-                                        <code>git rebase origin/main</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                    <p class="text-muted mt-2">Incorpora los cambios de main en tu rama de manera limpia.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="alert alert-info mb-4">
-                            <h4 class="alert-heading"><i class="bi bi-lightbulb-fill"></i> Consejos Pro</h4>
-                            <ul class="mb-0">
-                                <li>Haz <code>git pull --rebase</code> al menos una vez al día</li>
-                                <li>Antes de empezar una nueva tarea, actualiza tu rama</li>
-                                <li>Si trabajas en equipo, actualiza antes de subir tus cambios</li>
-                                <li>Usa <code>git fetch</code> para ver cambios sin aplicarlos</li>
-                            </ul>
-                        </div>
-
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h3 class="h5 mb-3">⚠️ Qué hacer si algo sale mal</h3>
-                                <div class="alert alert-warning">
-                                    <p><strong>Si el rebase falla:</strong></p>
-                                    <div class="command-box bg-light p-3 rounded">
-                                        <code>git rebase --abort</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                    <p class="text-muted mt-2">Esto te devuelve al estado anterior.</p>
-                                </div>
-                                <div class="alert alert-info mt-3">
-                                    <p><strong>Si hay conflictos:</strong></p>
-                                    <ol class="mb-0">
-                                        <li>Resuelve los conflictos en los archivos</li>
-                                        <li>Usa <code>git add .</code> para añadir los cambios</li>
-                                        <li>Continúa con <code>git rebase --continue</code></li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Conflictos Section -->
-        <section id="conflictos" class="container mb-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <article class="blog-post">
-                        <h2 class="mb-4">Resolución de Conflictos</h2>
-
-                        <div class="card mb-4 border-danger">
-                            <div class="card-body">
-                                <h3 class="h5 text-danger mb-3">⚠️ Casos Comunes de Conflicto</h3>
-                                <ul class="list-unstyled">
-                                    <li class="mb-2"><i class="bi bi-x-circle-fill text-danger me-2"></i>Dos personas modifican la misma línea de código</li>
-                                    <li class="mb-2"><i class="bi bi-x-circle-fill text-danger me-2"></i>Una persona modifica una línea que otra eliminó</li>
-                                    <li class="mb-2"><i class="bi bi-x-circle-fill text-danger me-2"></i>Cambios en el mismo archivo sin actualizar de main</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="mb-4">
-                            <h3 class="h5">Paso 1: Identificar el Conflicto</h3>
-                            <div class="command-box bg-light p-3 rounded mb-3">
-                                <code>git status</code>
-                                <button class="btn btn-sm btn-outline-primary copy-btn">
-                                    <i class="bi bi-clipboard"></i>
-                                </button>
-                            </div>
-                            <p class="text-muted">Git te mostrará los archivos con conflictos en rojo.</p>
-                        </div>
-
-                        <div class="mb-4">
-                            <h3 class="h5">Paso 2: Entender el Formato del Conflicto</h3>
-                            <div class="alert alert-info">
-                                <p>Git marca los conflictos así:</p>
-                                <pre class="bg-dark text-light p-3 rounded">
-<<<<<<< HEAD
-Tu código
-=======
-Código de tu compañero
->>>>>>> origin/main</pre>
-                                <p class="mt-2">Donde:</p>
-                                <ul>
-                                    <li><code><<<<<<< HEAD</code>: Tu versión del código</li>
-                                    <li><code>=======</code>: Separador entre las dos versiones</li>
-                                    <li><code>>>>>>>> origin/main</code>: Versión de tu compañero</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="mb-4">
-                            <h3 class="h5">Paso 3: Ejemplos de Conflictos Comunes</h3>
-                            
-                            <div class="card mb-3">
-                                <div class="card-body">
-                                    <h4 class="h6">Ejemplo 1: Modificación de la misma línea</h4>
-                                    <pre class="bg-light p-3 rounded">
-<<<<<<< HEAD
-const nombre = "Juan";
-=======
-const nombre = "María";
->>>>>>> origin/main</pre>
-                                    <p class="text-muted mt-2">Solución: Decidir qué nombre usar o combinarlos.</p>
-                                </div>
-                            </div>
-
-                            <div class="card mb-3">
-                                <div class="card-body">
-                                    <h4 class="h6">Ejemplo 2: Adición de código en el mismo lugar</h4>
-                                    <pre class="bg-light p-3 rounded">
-<<<<<<< HEAD
-function saludar() {
-    console.log("Hola");
-}
-=======
-function saludar() {
-    alert("Hola");
-}
->>>>>>> origin/main</pre>
-                                    <p class="text-muted mt-2">Solución: Elegir una implementación o combinar ambas.</p>
-                                </div>
-                            </div>
-
-                            <div class="card mb-3">
-                                <div class="card-body">
-                                    <h4 class="h6">Ejemplo 3: Eliminación vs Modificación</h4>
-                                    <pre class="bg-light p-3 rounded">
-<<<<<<< HEAD
-// Código eliminado
-=======
-// Código modificado
-const x = 5;
->>>>>>> origin/main</pre>
-                                    <p class="text-muted mt-2">Solución: Decidir si mantener, eliminar o modificar el código.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mb-4">
-                            <h3 class="h5">Paso 4: Resolver el Conflicto</h3>
-                            <ol class="list-group list-group-numbered mb-3">
-                                <li class="list-group-item">Abre el archivo con conflictos en tu editor</li>
-                                <li class="list-group-item">Busca las marcas de conflicto (<<<<<<<, =======, >>>>>>>)</li>
-                                <li class="list-group-item">Edita el archivo para resolver el conflicto</li>
-                                <li class="list-group-item">Elimina las marcas de conflicto</li>
-                                <li class="list-group-item">Guarda el archivo</li>
-                            </ol>
-                        </div>
-
-                        <div class="mb-4">
-                            <h3 class="h5">Paso 5: Finalizar la Resolución</h3>
-                            <div class="command-box bg-light p-3 rounded mb-3">
-                                <code>git add .</code>
-                                <button class="btn btn-sm btn-outline-primary copy-btn">
-                                    <i class="bi bi-clipboard"></i>
-                                </button>
-                            </div>
-                            <div class="command-box bg-light p-3 rounded mb-3">
-                                <code>git commit -m "Resuelve conflictos de merge"</code>
-                                <button class="btn btn-sm btn-outline-primary copy-btn">
-                                    <i class="bi bi-clipboard"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="alert alert-warning">
-                            <h4 class="alert-heading"><i class="bi bi-exclamation-triangle-fill"></i> Consejos Importantes</h4>
-                            <ul class="mb-0">
-                                <li>Antes de resolver conflictos, asegúrate de tener una copia de seguridad</li>
-                                <li>Comunícate con tu compañero si no estás seguro de qué cambios mantener</li>
-                                <li>Si te confundes, puedes usar <code>git rebase --abort</code> para empezar de nuevo</li>
-                                <li>Después de resolver conflictos, prueba que todo funcione correctamente</li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Comandos Avanzados Section -->
-        <section id="comandos-avanzados" class="container mb-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <article class="blog-post">
-                        <h2 class="mb-4">Comandos Avanzados</h2>
-
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h3 class="h5 mb-3">🔍 Comandos Útiles para Trabajo en Equipo</h3>
-                                
-                                <div class="mb-3">
-                                    <h4 class="h6">Ver Diferencias</h4>
-                                    <div class="command-box bg-light p-3 rounded">
-                                        <code>git diff origin/main..HEAD</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="mb-3">
-                                    <h4 class="h6">Deshacer Último Commit</h4>
-                                    <div class="command-box bg-light p-3 rounded">
-                                        <code>git reset --soft HEAD~1</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="mb-3">
-                                    <h4 class="h6">Guardar Cambios Temporalmente</h4>
-                                    <div class="command-box bg-light p-3 rounded">
-                                        <code>git stash</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="mb-3">
-                                    <h4 class="h6">Recuperar Cambios Guardados</h4>
-                                    <div class="command-box bg-light p-3 rounded">
-                                        <code>git stash pop</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Mejores Prácticas Section -->
-        <section id="mejores-practicas" class="container mb-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <article class="blog-post">
-                        <h2 class="mb-4">Mejores Prácticas</h2>
-
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h3 class="h5 mb-3">✅ Lista de Verificación Diaria</h3>
-                                <div class="list-group list-group-flush">
-                                    <div class="list-group-item">
-                                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                        Actualizar main antes de crear una nueva rama
-                                    </div>
-                                    <div class="list-group-item">
-                                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                        Hacer commits pequeños y frecuentes
-                                    </div>
-                                    <div class="list-group-item">
-                                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                        Escribir mensajes de commit descriptivos
-                                    </div>
-                                    <div class="list-group-item">
-                                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                        Mantener la rama actualizada con main
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="alert alert-success mb-4">
-                            <h4 class="alert-heading">💡 Consejo Pro</h4>
-                            <p class="mb-0">Antes de hacer push de tus cambios, siempre ejecuta:</p>
-                            <div class="command-box bg-light p-3 rounded mt-2">
-                                <code>git pull --rebase origin main</code>
-                                <button class="btn btn-sm btn-outline-primary copy-btn">
-                                    <i class="bi bi-clipboard"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Essential Commands Section -->
-        <section id="comandos-esenciales" class="container mb-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="section-title">
-                        <span class="emoji-title">🛠️</span>
-                        Comandos Esenciales
-                    </h2>
-                    <p class="section-subtitle">Operaciones fundamentales que debes conocer</p>
-                </div>
-            </div>
-
-            <div class="row justify-content-center mt-4">
-                <div class="col-lg-10">
-                    <div class="essential-commands-grid">
-                        <!-- Gestión de Ramas -->
-                        <div class="command-category-card">
-                            <h3 class="category-title">
-                                <i class="bi bi-diagram-2-fill"></i>
-                                Gestión de Ramas
-                            </h3>
-                            <div class="command-list">
-                                <div class="essential-command">
-                                    <div class="command-box bg-light p-2 rounded">
-                                        <code>git branch</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                    <p class="command-explanation">Ver todas las ramas 📋</p>
-                                </div>
-
-                                <div class="essential-command">
-                                    <div class="command-box bg-light p-2 rounded">
-                                        <code>git checkout -b nueva-rama</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                    <p class="command-explanation">Crear y cambiar a nueva rama 🌱</p>
-                                </div>
-
-                                <div class="essential-command">
-                                    <div class="command-box bg-light p-2 rounded">
-                                        <code>git checkout nombre-rama</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                    <p class="command-explanation">Cambiar a otra rama 🔄</p>
-                                </div>
-
-                                <div class="essential-command">
-                                    <div class="command-box bg-light p-2 rounded">
-                                        <code>git branch -m nuevo-nombre</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                    <p class="command-explanation">Renombrar rama actual ✏️</p>
-                                </div>
-
-                                <div class="essential-command">
-                                    <div class="command-box bg-light p-2 rounded">
-                                        <code>git branch -d nombre-rama</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                    <p class="command-explanation">Eliminar una rama 🗑️</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Gestión de Commits -->
-                        <div class="command-category-card">
-                            <h3 class="category-title">
-                                <i class="bi bi-clock-history"></i>
-                                Control de Versiones
-                            </h3>
-                            <div class="command-list">
-                                <div class="essential-command">
-                                    <div class="command-box bg-light p-2 rounded">
-                                        <code>git log --oneline</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                    <p class="command-explanation">Ver historial de commits 📜</p>
-                                </div>
-
-                                <div class="essential-command">
-                                    <div class="command-box bg-light p-2 rounded">
-                                        <code>git reset --hard HEAD~1</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                    <p class="command-explanation">Deshacer último commit ⏮️</p>
-                                </div>
-
-                                <div class="essential-command">
-                                    <div class="command-box bg-light p-2 rounded">
-                                        <code>git reset --soft HEAD~1</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                    <p class="command-explanation">Deshacer commit manteniendo cambios 🔄</p>
-                                </div>
-
-                                <div class="essential-command">
-                                    <div class="command-box bg-light p-2 rounded">
-                                        <code>git checkout -- .</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                    <p class="command-explanation">Descartar todos los cambios locales 🗑️</p>
-                                </div>
-
-                                <div class="essential-command">
-                                    <div class="command-box bg-light p-2 rounded">
-                                        <code>git stash</code>
-                                        <button class="btn btn-sm btn-outline-primary copy-btn">
-                                            <i class="bi bi-clipboard"></i>
-                                        </button>
-                                    </div>
-                                    <p class="command-explanation">Guardar cambios temporalmente 💾</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="alert alert-warning mt-4">
-                        <i class="bi bi-exclamation-triangle-fill"></i>
-                        <strong>¡Importante!</strong> Los comandos con <code>--hard</code> eliminan cambios permanentemente. ¡Úsalos con precaución! 🚨
-                    </div>
+                    <h2 class="fw-bold mb-3">¿Qué es EXPO TECH RESOURCES?</h2>
+                    <p class="lead">Es un portal educativo diseñado para estudiantes que desean aprender, practicar y dominar las herramientas más importantes del desarrollo web y la programación moderna. Aquí encontrarás guías, tutoriales y recursos seleccionados para potenciar tus proyectos.</p>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-8 text-start">
-                    <p class="mb-0" data-translate="footer">
-                        Desarrollado por <span class="text-danger">soynixonlopez</span> <i class="bi bi-heart-fill text-danger"></i> para "Programa Superate Fundación Alberto Motta"
-                    </p>
-                </div>
-                <div class="col-md-4 text-end">
-                    <div class="social-links">
-                        <a href="https://github.com/soynixonlopez" target="_blank" class="text-white me-3">
-                            <i class="bi bi-github fs-4"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/nixonlopez/" target="_blank" class="text-white">
-                            <i class="bi bi-linkedin fs-4"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap Bundle with Popper -->
+    <footer-component></footer-component>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="translations.js"></script>
-    <script src="script.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
