@@ -3,124 +3,462 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="recursos, estudiantes, programación, git, firebase, javascript, python, vscode, flet, vite, web, tutoriales, aprendizaje">
-    <title>EXPO TECH RESOURCES</title>
+    <title>Git Gaming Guide - Comandos Esenciales</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/git.css">
 </head>
 <body>
-    <!--hola-->
+    <!-- Header -->
     <header-component></header-component>
-    <main>
-        <section class="hero-homepage position-relative text-white py-5">
-            <div class="container position-relative z-2">
-                <div class="row align-items-center justify-content-center text-center">
-                    <div class="col-lg-7 mx-auto">
-                        <h1 class="display-2 fw-bold mb-3">Bienvenido a <span class="text-warning">EXPO TECH RESOURCES</span></h1>
-                        <p class="lead mb-4">Tu portal de recursos, guías y materiales para construir proyectos web modernos.<br>¡Aprende, explora y crea con las mejores herramientas!</p>
-                        <a href="#recursos-rapidos" class="btn btn-warning btn-lg shadow px-5 py-3 fs-4">Ver Recursos Destacados <i class="bi bi-arrow-down-circle ms-2"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- Decorative SVG or icons -->
-            <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/git-branch-24.svg" class="decor-svg decor-git-branch" alt="git branch">
-            <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/git-commit-24.svg" class="decor-svg decor-git-commit" alt="git commit">
-            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/icons/fire.svg" class="decor-svg decor-fire" alt="firebase">
-            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/icons/filetype-js.svg" class="decor-svg decor-js" alt="js">
-            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/icons/filetype-py.svg" class="decor-svg decor-py" alt="python">
-            <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/icons/code-slash.svg" class="decor-svg decor-code" alt="code">
-        </section>
-        <section id="recursos-rapidos" class="container py-5">
-            <div class="row text-center mb-4">
-                <h2 class="fw-bold">Acceso Rápido a Recursos</h2>
-                <p class="text-muted">Explora las secciones más importantes para tu aprendizaje</p>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center">
-                            <i class="bi bi-git fs-1 text-primary mb-3"></i>
-                            <h5 class="card-title">Git y Control de Versiones</h5>
-                            <p class="card-text">Aprende a trabajar en equipo y gestionar tu código como un profesional.</p>
-                            <a href="pages/git.html" class="btn btn-outline-primary">Ver Guía</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center">
-                            <i class="bi bi-fire fs-1 text-danger mb-3"></i>
-                            <h5 class="card-title">Firebase para Web</h5>
-                            <p class="card-text">Descubre cómo integrar autenticación, base de datos y más en tus proyectos.</p>
-                            <a href="firebase/instalacion.html" class="btn btn-outline-danger">Ver Recursos</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center">
-                            <i class="bi bi-filetype-js fs-1 text-warning mb-3"></i>
-                            <h5 class="card-title">Fundamentos de JavaScript</h5>
-                            <p class="card-text">Domina el lenguaje esencial para el desarrollo web interactivo.</p>
-                            <a href="javascript/index.html" class="btn btn-outline-warning">Empezar</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center">
-                            <i class="bi bi-filetype-py fs-1 text-info mb-3"></i>
-                            <h5 class="card-title">Fundamentos de Python</h5>
-                            <p class="card-text">Aprende Python desde cero y potencia tus proyectos web y de datos.</p>
-                            <a href="python/index.html" class="btn btn-outline-info">Empezar</a>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="container">
+                <div class="row justify-content-center text-center py-5">
+                    <div class="col-lg-10">
+                        <div class="hero-content">
+                            <div class="hero-icon">
+                                <i class="bi bi-terminal-fill"></i>
+                            </div>
+                            <h1 class="hero-title">
+                                <span class="text-glow" data-translate="hero-title-1">GIT</span> 
+                                <span class="text-accent" data-translate="hero-title-2">GAMING GUIDE</span>
+                            </h1>
+                            <p class="hero-subtitle" data-translate="hero-subtitle">Domina Git como un Pro Gamer 🎮</p>
+                            <div class="hero-stats">
+                                <div class="stat">
+                                    <span class="stat-number">5</span>
+                                    <span class="stat-label" data-translate="hero-stat-1">Comandos Básicos</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">3</span>
+                                    <span class="stat-label" data-translate="hero-stat-2">Flujos Principales</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">∞</span>
+                                    <span class="stat-label" data-translate="hero-stat-3">Errores Resueltos</span>
+                                </div>
                             </div>
                         </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center">
-                            <i class="bi bi-code-slash fs-1 text-success mb-3"></i>
-                            <h5 class="card-title">VS Code y Extensiones</h5>
-                            <p class="card-text">Configura tu entorno de desarrollo para máxima productividad.</p>
-                            <a href="vscode/index.html" class="btn btn-outline-success">Ver Guía</a>
-                        </div>
-                        </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center">
-                            <i class="bi bi-lightning-fill fs-1 text-primary mb-3"></i>
-                            <h5 class="card-title">Flet (Python Web)</h5>
-                            <p class="card-text">Crea apps web modernas con Python y Flet fácilmente.</p>
-                            <a href="flet/index.html" class="btn btn-outline-primary">Ver Recursos</a>
-                            </div>
-                        </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center">
-                            <i class="bi bi-lightning-charge fs-1 text-warning mb-3"></i>
-                            <h5 class="card-title">Vite: Servidor Local Rápido</h5>
-                            <p class="card-text">Configura y lanza tu entorno de desarrollo web en segundos.</p>
-                            <a href="vite/index.html" class="btn btn-outline-warning">Ver Guía</a>
-                        </div>
-                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="container py-5">
+
+        <!-- Quick Start Section -->
+        <section id="quick-start" class="container mb-5">
             <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="fw-bold mb-3">¿Qué es EXPO TECH RESOURCES?</h2>
-                    <p class="lead">Es un portal educativo diseñado para estudiantes que desean aprender, practicar y dominar las herramientas más importantes del desarrollo web y la programación moderna. Aquí encontrarás guías, tutoriales y recursos seleccionados para potenciar tus proyectos.</p>
+                <div class="col-lg-10">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                            <span data-translate="quick-start-title">QUICK START</span>
+                        </h2>
+                        <p class="section-subtitle" data-translate="quick-start-subtitle">Los 5 comandos que necesitas para sobrevivir</p>
+                    </div>
+
+                    <div class="command-grid">
+                        <!-- Comando 1: Init -->
+                        <div class="command-card level-1">
+                            <div class="command-header">
+                                <div class="command-level">LVL 1</div>
+                                <div class="command-icon">
+                                    <i class="bi bi-play-circle-fill"></i>
+                                </div>
+                            </div>
+                            <div class="command-content">
+                                <h3 class="command-name" data-translate="cmd-init-name">INICIALIZAR</h3>
+                                <div class="command-box">
+                                    <code>git init</code>
+                                    <button class="copy-btn" title="Copiar comando">
+                                        <i class="bi bi-clipboard"></i>
+                                    </button>
+                                </div>
+                                <p class="command-desc" data-translate="cmd-init-desc">Inicia un nuevo repositorio Git en tu proyecto</p>
+                                <div class="command-tip">
+                                    <i class="bi bi-lightbulb-fill"></i>
+                                    <span data-translate="cmd-init-tip">Solo úsalo una vez por proyecto</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Comando 2: Add -->
+                        <div class="command-card level-2">
+                            <div class="command-header">
+                                <div class="command-level">LVL 2</div>
+                                <div class="command-icon">
+                                    <i class="bi bi-plus-circle-fill"></i>
+                                </div>
+                            </div>
+                            <div class="command-content">
+                                <h3 class="command-name" data-translate="cmd-add-name">PREPARAR</h3>
+                                <div class="command-box">
+                                    <code>git add .</code>
+                                    <button class="copy-btn" title="Copiar comando">
+                                        <i class="bi bi-clipboard"></i>
+                                    </button>
+                                </div>
+                                <p class="command-desc" data-translate="cmd-add-desc">Prepara todos los archivos modificados para el commit</p>
+                                <div class="command-tip">
+                                    <i class="bi bi-lightbulb-fill"></i>
+                                    <span data-translate="cmd-add-tip">El punto (.) incluye todos los archivos</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Comando 3: Commit -->
+                        <div class="command-card level-3">
+                            <div class="command-header">
+                                <div class="command-level">LVL 3</div>
+                                <div class="command-icon">
+                                    <i class="bi bi-save-fill"></i>
+                                </div>
+                            </div>
+                                                        <div class="command-content">
+                                <h3 class="command-name" data-translate="cmd-commit-name">GUARDAR</h3>
+                                <div class="command-box">
+                                    <code>git commit -m "tu mensaje"</code>
+                                    <button class="copy-btn" title="Copiar comando">
+                                        <i class="bi bi-clipboard"></i>
+                                    </button>
+                                </div>
+                                <p class="command-desc" data-translate="cmd-commit-desc">Guarda los cambios con un mensaje descriptivo</p>
+                                <div class="command-tip">
+                                    <i class="bi bi-lightbulb-fill"></i>
+                                    <span data-translate="cmd-commit-tip">Usa mensajes claros y descriptivos</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Comando 4: Pull -->
+                        <div class="command-card level-4">
+                            <div class="command-header">
+                                <div class="command-level">LVL 4</div>
+                                <div class="command-icon">
+                                    <i class="bi bi-cloud-download-fill"></i>
+                                </div>
+                            </div>
+                                                        <div class="command-content">
+                                <h3 class="command-name" data-translate="cmd-pull-name">ACTUALIZAR</h3>
+                                <div class="command-box">
+                                    <code>git pull origin main</code>
+                                    <button class="copy-btn" title="Copiar comando">
+                                        <i class="bi bi-clipboard"></i>
+                                    </button>
+                                </div>
+                                <p class="command-desc" data-translate="cmd-pull-desc">Descarga los últimos cambios del repositorio</p>
+                                <div class="command-tip">
+                                    <i class="bi bi-exclamation-triangle-fill"></i>
+                                    <span data-translate="cmd-pull-tip">¡Hazlo ANTES de trabajar!</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Comando 5: Push -->
+                        <div class="command-card level-5">
+                            <div class="command-header">
+                                <div class="command-level">LVL 5</div>
+                                <div class="command-icon">
+                                    <i class="bi bi-cloud-upload-fill"></i>
+                                </div>
+                            </div>
+                                                        <div class="command-content">
+                                <h3 class="command-name" data-translate="cmd-push-name">SUBIR</h3>
+                                <div class="command-box">
+                                    <code>git push origin main</code>
+                                    <button class="copy-btn" title="Copiar comando">
+                                        <i class="bi bi-clipboard"></i>
+                                    </button>
+                                </div>
+                                <p class="command-desc" data-translate="cmd-push-desc">Sube tus cambios al repositorio remoto</p>
+                                <div class="command-tip">
+                                    <i class="bi bi-people-fill"></i>
+                                    <span data-translate="cmd-push-tip">¡Comunícate con tu equipo!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Flows Section -->
+        <section id="game-flows" class="container mb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <i class="bi bi-controller"></i>
+                            <span data-translate="flows-title">FLUJOS DE JUEGO</span>
+                        </h2>
+                        <p class="section-subtitle" data-translate="flows-subtitle">Combos y estrategias para diferentes situaciones</p>
+                    </div>
+
+                    <div class="flow-grid">
+                        <!-- Flujo 1: Primer Proyecto -->
+                        <div class="flow-card quest-new">
+                            <div class="flow-header">
+                                <div class="flow-icon">
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <h3 class="flow-title" data-translate="flow-new-title">NUEVO PROYECTO</h3>
+                                <span class="flow-badge" data-translate="flow-new-badge">QUEST</span>
+                            </div>
+                            <div class="flow-content">
+                                <div class="flow-steps">
+                                    <div class="step">
+                                        <span class="step-number">1</span>
+                                        <code>git init</code>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">2</span>
+                                        <code>git add .</code>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">3</span>
+                                        <code>git commit -m "inicial"</code>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">4</span>
+                                        <code>git push origin main</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Flujo 2: Trabajo Diario -->
+                        <div class="flow-card quest-daily">
+                            <div class="flow-header">
+                                <div class="flow-icon">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                </div>
+                                <h3 class="flow-title" data-translate="flow-daily-title">TRABAJO DIARIO</h3>
+                                <span class="flow-badge" data-translate="flow-daily-badge">DAILY</span>
+                            </div>
+                            <div class="flow-content">
+                                <div class="flow-steps">
+                                    <div class="step">
+                                        <span class="step-number">1</span>
+                                        <code>git pull origin main</code>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">2</span>
+                                        <span class="step-text" data-translate="flow-daily-step">Trabaja en tu código</span>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">3</span>
+                                        <code>git add .</code>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">4</span>
+                                        <code>git commit -m "cambios"</code>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">5</span>
+                                        <code>git push origin main</code>
+                            </div>
+                        </div>
+                </div>
+                        </div>
+
+                        <!-- Flujo 3: Error Recovery -->
+                        <div class="flow-card quest-error">
+                            <div class="flow-header">
+                                <div class="flow-icon">
+                                    <i class="bi bi-exclamation-triangle-fill"></i>
+                                </div>
+                                <h3 class="flow-title" data-translate="flow-error-title">ERROR AL PULL</h3>
+                                <span class="flow-badge" data-translate="flow-error-badge">BOSS</span>
+                            </div>
+                            <div class="flow-content">
+                                <div class="flow-steps">
+                                    <div class="step step-error">
+                                        <span class="step-number">!</span>
+                                        <span class="step-text" data-translate="flow-error-step">git pull falla</span>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">1</span>
+                                        <code>git add .</code>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">2</span>
+                                        <code>git commit -m "guardando"</code>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">3</span>
+                                        <code>git pull origin main</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Errors Section -->
+        <section id="common-errors" class="container mb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <i class="bi bi-bug-fill"></i>
+                            <span data-translate="errors-title">ERRORES COMUNES</span>
+                        </h2>
+                        <p class="section-subtitle" data-translate="errors-subtitle">Boss Battles y cómo derrotarlos</p>
+                    </div>
+
+                    <div class="error-grid">
+                        <!-- Error 1: Merge Conflict -->
+                        <div class="error-card">
+                            <div class="error-header">
+                                <div class="error-icon">
+                                    <i class="bi bi-exclamation-octagon-fill"></i>
+                                </div>
+                                <h3 class="error-title" data-translate="error-merge-title">MERGE CONFLICT</h3>
+                                <span class="error-level" data-translate="error-merge-level">BOSS LVL 1</span>
+                            </div>
+                            <div class="error-content">
+                                <p class="error-desc" data-translate="error-merge-desc">Dos personas modificaron el mismo archivo</p>
+                                <div class="error-solution">
+                                    <h4 data-translate="error-merge-solution">SOLUCIÓN:</h4>
+                                    <div class="solution-steps">
+                                        <div class="solution-step">
+                                            <span>1.</span> <span data-translate="error-merge-step1">Abre el archivo conflictivo</span>
+                                        </div>
+                                        <div class="solution-step">
+                                            <span>2.</span> <span data-translate="error-merge-step2">Busca las marcas</span> <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>
+                                        </div>
+                                        <div class="solution-step">
+                                            <span>3.</span> <span data-translate="error-merge-step3">Elige qué código mantener</span>
+                                        </div>
+                                        <div class="solution-step">
+                                            <span>4.</span> <span data-translate="error-merge-step4">Elimina las marcas de conflicto</span>
+                                        </div>
+                                        <div class="solution-step">
+                                            <span>5.</span> <code>git add .</code> <span data-translate="error-merge-step5">y</span> <code>git commit</code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Error 2: Push Rejected -->
+                        <div class="error-card">
+                            <div class="error-header">
+                                <div class="error-icon">
+                                    <i class="bi bi-x-circle-fill"></i>
+                                </div>
+                                <h3 class="error-title" data-translate="error-push-title">PUSH REJECTED</h3>
+                                <span class="error-level" data-translate="error-push-level">BOSS LVL 2</span>
+                            </div>
+                            <div class="error-content">
+                                <p class="error-desc" data-translate="error-push-desc">Tu código está desactualizado</p>
+                                <div class="error-solution">
+                                    <h4 data-translate="error-push-solution">SOLUCIÓN:</h4>
+                                    <div class="command-box">
+                                        <code>git pull origin main</code>
+                                        <button class="copy-btn">
+                                            <i class="bi bi-clipboard"></i>
+                                        </button>
+                                    </div>
+                                    <p class="solution-note" data-translate="error-push-note">Luego resuelve conflictos si aparecen</p>
+                        </div>
+                </div>
+                        </div>
+
+                        <!-- Error 3: Force Push -->
+                        <div class="error-card danger">
+                            <div class="error-header">
+                                <div class="error-icon">
+                                    <i class="bi bi-lightning-fill"></i>
+                                </div>
+                                <h3 class="error-title" data-translate="error-force-title">FORCE PUSH</h3>
+                                <span class="error-level" data-translate="error-force-level">FINAL BOSS</span>
+                            </div>
+                            <div class="error-content">
+                                <p class="error-desc" data-translate="error-force-desc">Sobrescribe historial (¡PELIGROSO!)</p>
+                                <div class="error-solution">
+                                    <h4 data-translate="error-force-solution">COMANDO:</h4>
+                                    <div class="command-box danger">
+                                        <code>git push --force origin main</code>
+                                        <button class="copy-btn">
+                                            <i class="bi bi-clipboard"></i>
+                                        </button>
+                                    </div>
+                                    <div class="danger-warning">
+                                        <i class="bi bi-exclamation-triangle-fill"></i>
+                                        <span data-translate="error-force-warning">¡SOLO úsalo si sabes lo que haces!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Communication Section -->
+        <section id="team-communication" class="container mb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="team-card">
+                        <div class="team-header">
+                            <div class="team-icon">
+                                <i class="bi bi-people-fill"></i>
+                            </div>
+                            <h2 class="team-title" data-translate="team-title">COMUNICACIÓN DE EQUIPO</h2>
+                        </div>
+                        <div class="team-content">
+                            <div class="team-rules">
+                                <div class="rule">
+                                    <div class="rule-icon">
+                                        <i class="bi bi-chat-dots-fill"></i>
+                                    </div>
+                                                                    <div class="rule-content">
+                                    <h3 data-translate="team-rule1-title">Comunícate antes de hacer cambios grandes</h3>
+                                    <p data-translate="team-rule1-desc">Avisa a tu equipo cuando vayas a modificar archivos importantes</p>
+                                </div>
+                                </div>
+                                <div class="rule">
+                                    <div class="rule-icon">
+                                        <i class="bi bi-clock-fill"></i>
+                                    </div>
+                                                                    <div class="rule-content">
+                                    <h3 data-translate="team-rule2-title">Haz pull frecuentemente</h3>
+                                    <p data-translate="team-rule2-desc">Actualiza tu código varias veces al día para evitar conflictos</p>
+                                </div>
+                                </div>
+                                <div class="rule">
+                                    <div class="rule-icon">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </div>
+                                                                    <div class="rule-content">
+                                    <h3 data-translate="team-rule3-title">Usa mensajes de commit descriptivos</h3>
+                                    <p data-translate="team-rule3-desc">Ayuda a tu equipo a entender qué cambios hiciste</p>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Footer -->
     <footer-component></footer-component>
+    
+    <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/component.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/component.js"></script>
 </body>
 </html>
